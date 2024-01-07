@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MYCalculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calsi">
+            <div class="top">
+                <div class="speaker"></div>
+            </div>
+            <div class="title">
+                <div class="title-calsi">Calculator</div>
+                <div class="circles">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="main-calsi">
+                <div class="intput">
+                    <input type="text" id="displayans">
+                </div>
+
+                <div class="rows">
+                    <div class="row">
+                        <button class="button" id="clear" onclick="displayans.value = '' ">AC</button>
+                        <button class="button" id="cut" onclick="displayans.value = displayans.value.toString().slice(0, -1)">X</button>
+                        <button class="sign" onclick="displayans.value += '/'">/</button>
+                        <button class="sign" onclick="displayans.value += '*'">*</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="button" onclick="displayans.value += '7'">7</button>
+                        <button class="button" onclick="displayans.value += '8'">8</button>
+                        <button class="button" onclick="displayans.value += '9'">9</button>
+                        <button class="sign" onclick="displayans.value += '-'">-</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="button" onclick="displayans.value += '4'">4</button>
+                        <button class="button" onclick="displayans.value += '5'">5</button>
+                        <button class="button" onclick="displayans.value += '6'">6</button>
+                        <button class="sign" onclick="displayans.value += '+'">+</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="button" onclick="displayans.value += '1'">1</button>
+                        <button class="button" onclick="displayans.value += '2'">2</button>
+                        <button class="button" onclick="displayans.value += '3'">3</button>
+                        <button class="sign" onclick="displayans.value += '%'">%</button>
+                    </div>
+
+                    <div class="row">
+                        <button class="big" onclick="displayans.value += '0'">0</button>
+                        <button class="button" onclick="displayans.value += '.'">.</button>
+                        <button class="sign" onclick="displayans.value = eval(displayans.value)">=</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
